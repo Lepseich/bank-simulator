@@ -1,0 +1,6 @@
+[
+    { "transactionId": 1, "accountId": 1, "type": "deposit", "amount": 1000, "date": "2025-01-01" },
+    { "transactionId": 2, "accountId": 1, "type": "withdraw", "amount": 500, "date": "2025-01-02" },
+    { "transactionId": 3, "accountId": 2, "type": "deposit", "amount": 1500, "date": "2025-01-03" }
+  ]
+  
