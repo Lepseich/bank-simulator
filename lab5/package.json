@@ -1,0 +1,13 @@
+{
+    "name": "bank-simulator",
+    "version": "1.0.0",
+    "description": "A simple bank simulator using Node.js",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "devDependencies": {},
+    "author": "",
+    "license": "ISC",
+    "keywords": []
+}
