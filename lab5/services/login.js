@@ -1,8 +1,13 @@
-const { users } = require('../data/users');
+const users = require('../data/users');
 
-function login(email, password) {
-    const user = users.find(u => u.email === email && u.password === password);
-    return user ? user : null;
+function login(userId, callback) {
+  users.getUserById(userId, (user) => {
+    if (user) {
+      callback(true, user);
+    } else {
+      callback(false, null);
+    }
+  });
 }
 
 module.exports = { login };

@@ -1,7 +1,14 @@
-const transactions = [
-    { id: 1, userId: 1, amount: 500, type: 'deposit', date: '2025-01-01' },
-    { id: 2, userId: 1, amount: 200, type: 'withdrawal', date: '2025-01-05' },
-    { id: 3, userId: 2, amount: 1000, type: 'deposit', date: '2025-01-03' }
-];
+const db = require('./db');
 
-module.exports = { transactions };
+
+function getTransactionsByUserId(userId, callback) {
+  const query = 'SELECT * FROM transactions WHERE user_id = ?';
+  db.all(query, [userId], (err, rows) => {
+    if (err) {
+      console.error('Помилка при отриманні транзакцій:', err.message);
+    }
+    callback(rows);
+  });
+}
+
+module.exports = { getTransactionsByUserId };
